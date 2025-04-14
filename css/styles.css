@@ -25,6 +25,7 @@ nav {
   margin-bottom: 20px;
   width: 100%;
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -34,6 +35,7 @@ nav ul {
   padding: 0;
   margin: 0;
 }
+
 nav ul li a {
   display: block;
   text-decoration: none;
@@ -45,6 +47,7 @@ nav ul li a {
   border-radius: 5px;
   background: #444;
 }
+
 nav ul li a:hover {
   background: #f4a261;
   color: #222;
@@ -69,11 +72,12 @@ p, ul {
   font-size: 1rem;
   margin-bottom: 10px;
 }
+
 ul {
   padding-left: 20px;
 }
 
-/* Resume Layout */
+/* Resume, About, and AI Layout */
 .resume,
 .about-container,
 .ai-container {
@@ -119,20 +123,70 @@ ul {
   border-radius: 10px;
 }
 
-/* Responsive Design for larger screens */
-@media (min-width: 768px) {
+/* MEDIA QUERY 1 – Tablets and small screens (min-width: 600px) */
+@media (min-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .ai-container {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+
+  video,
+  img {
+    border-radius: 12px;
+    max-width: 90%;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+/* MEDIA QUERY 2 – Desktops and large screens (min-width: 900px) */
+@media (min-width: 900px) {
+  body {
+    max-width: 1000px;
+    margin: auto;
+  }
+
   nav ul {
     flex-direction: row;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
   }
 
   h1 {
     font-size: 2.5rem;
   }
 
-  p, ul {
-    font-size: 1.1rem;
+  .ai-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .ai-container p,
+  .ai-container video,
+  .ai-container img {
+    flex: 1;
   }
 
   .about-section {
-    flex-direction
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
